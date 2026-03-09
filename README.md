@@ -6,6 +6,14 @@ This project is designed with a **clean full-stack architecture** and is **open 
 
 ---
 
+![Next.js](https://img.shields.io/badge/Next.js-15-black)
+![Node.js](https://img.shields.io/badge/Node.js-Express-green)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-brightgreen)
+![Open Source](https://img.shields.io/badge/Open%20Source-Welcome-orange)
+![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-blue)
+
+---
+
 # 🚀 Project Overview
 
 The Notes App allows users to:
