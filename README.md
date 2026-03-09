@@ -55,7 +55,7 @@ This separation helps maintain a scalable **frontend-backend architecture** simi
 ### Other Tools
 
 * REST API
-* JSON Web Tokens (if authentication exists)
+* JSON Web Tokens
 
 ---
 
