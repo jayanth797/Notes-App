@@ -57,4 +57,32 @@
     font-weight: bold;
     color: #007bff;
   }
-  
+
+  /* Folder Indicator */
+  .note-folder-indicator {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.78rem;
+    color: #b45309;
+    background-color: rgba(251, 191, 36, 0.15);
+    border-radius: 6px;
+    padding: 3px 8px;
+    margin-bottom: 4px;
+    width: fit-content;
+    cursor: default;
+  }
+
+  .note-folder-icon {
+    font-size: 0.85rem;
+    color: #d97706;
+    flex-shrink: 0;
+  }
+
+  .note-folder-name {
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+  }

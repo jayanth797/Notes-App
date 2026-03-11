@@ -58,6 +58,11 @@ exports.addnotesInfolder = async(req,res)=>{
         const Folder = await folder.findByIdAndUpdate(req.body._id,{
             $push:{folderNotes:req.body.NoteId}
         })
+        // Stamp folderId and folderName on the note so NoteCard can show the folder icon
+        await Note.findByIdAndUpdate(req.body.NoteId, {
+            folderId: req.body._id,
+            folderName: folderData.folderName
+        })
         res.send({Folder,msg:"note added in folder"})
        }else{
           res.send("file already exists")
@@ -81,6 +86,11 @@ exports.deletenotesfromfolder = async(req,res)=>{
 
         await folder.findByIdAndUpdate(folderId,{
             $set:{folderNotes:updatefolder}
+        })
+        // Clear folderId and folderName from the note so folder icon disappears
+        await Note.findByIdAndUpdate(NoteId, {
+            folderId: null,
+            folderName: null
         })
         res.send({folder,updatefolder,msg:"note deleted"})
     } catch (error) {

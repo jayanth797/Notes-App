@@ -39,6 +39,14 @@ const noteSchema = new mongoose.Schema({
   isPinned: {
     type: Boolean,
     default: false
+  },
+  folderId: {
+    type: String,
+    default: null
+  },
+  folderName: {
+    type: String,
+    default: null
   }
 });
 
