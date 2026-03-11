@@ -1,8 +1,9 @@
 import React from "react";
+import { FaFolder } from "react-icons/fa";
 import "./NoteCard.css"
 
 const NoteCard = ({ note, onShowNotes }) => {
-  const { title, content, createdAt, Filters, tags } = note;
+  const { title, content, createdAt, Filters, tags, folderId, folderName } = note;
   const backgroundColor = Filters?.[0]?.Color || "#fdfdfd";
 
   return (
@@ -19,6 +20,19 @@ const NoteCard = ({ note, onShowNotes }) => {
           day: "numeric",
         })}
       </span>
+
+      {/* Folder Indicator */}
+      {folderId && (
+        <div
+          className="note-folder-indicator"
+          title={folderName ? `Folder: ${folderName}` : "In a folder"}
+        >
+          <FaFolder className="note-folder-icon" />
+          {folderName && (
+            <span className="note-folder-name">{folderName}</span>
+          )}
+        </div>
+      )}
 
       {/* Header Section */}
       <div
